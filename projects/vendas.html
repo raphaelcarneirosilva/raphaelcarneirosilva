@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="no-js ss-preload" lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>Vendas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <style>
+        .next-project-arrow {
+            position: fixed;
+            right: 20px; /* distância da borda direita */
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            background-color: #001f3f;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .next-project-arrow:hover {
+            background-color: #24396d;
+        }
+
+        .lightbox-img {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .lightbox-container {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+    </style>
+
+
+</head>
+
+<body id="top">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+    <div class="s-pagewrap">
+
+        <!-- Header -->
+        <header class="s-header">
+
+            <div class="header-mobile">
+                <span class="mobile-home-link"><a href="index.html">Portifólio.</a></span>
+                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+            </div>
+
+            <div class="row wide main-nav-wrap">
+                <nav class="column lg-12 main-nav">
+                    <ul>
+                        <li><a href="../index.html" class="home-link">Portifólio.</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header> <!-- end s-header -->
+
+        <!-- Main content -->
+        <main class="s-content s-content--narrow">
+
+            <article class="row format-standard">
+
+                <div class="column lg-10 s-content__header s-content__header--narrow">
+                    <h2 class="s-content__title s-content__title--post">Predição de valor de venda de imóveis
+                        <a style="font-size: large;" href="https://github.com/KennedyRMenezes/DataScience/blob/master/Projetos/Regress%C3%A3o%20Linear/Projeto_Regressao_.ipynb" target="_blank" rel="noopener noreferrer" style="font-size: 0.8rem; text-decoration: none;">
+                            🔗
+                        </a>
+                    </h2>
+                    <p class="lead" style="font-size: large;">
+                        Projeto para exercitar a construção de um Modelo de Regressão de Machine Learning.
+                    </p>
+                </div>
+
+                <div class="column lg-10 s-content__main s-content__main--narrow">
+
+
+                    <h3 style="margin-top: -5px;">Descrição do Projeto</h3>
+                    <p class="lead" style="font-size: large;">
+                        O projeto para a construção do modelo não se preocupou no tratamento de dados, mas na metodologia para que, ao fim o modelo fosse o mais eficiente possível.
+                    </p>
+                    <div  style="margin-top: -20px;">
+                        <p class="lead" style="font-size: large;">
+                           A descrição desse projeto é destinada a quem já possui um breve entendimento da área, por isso me privarei do esforço de explicar o que cada coisa é e irei me deter apenas a descrição de cada etapa (mais detalhes pode ser encontrado no <a style="font-size: large;" href="https://github.com/KennedyRMenezes/DataScience/blob/master/Projetos/Regress%C3%A3o%20Linear/Projeto_Regressao_.ipynb" target="_blank" rel="noopener noreferrer" style="font-size: 0.8rem; text-decoration: none;">código</a>). Farei um resumo em forma de lista destacando o que foi feito e os motivos de cada decisão. 
+                        </p>
+                    </div>
+                    <div  style="margin-top: -20px;">
+                        <p class="lead" style="font-size: large;">
+                            <ul>
+                                <li>Exploração de Dados com:
+                                <ul style="margin-top: -5px;">
+                                    <li>describe(): exibe estatísticas descritivas básicas como média, desvio padrão e quartis</li>
+                                    <li>info(): mostra o tipo de dado de cada coluna, valores não nulos e uso de memória</li>
+                                    <li>Histograma da distribuição dos valores das casas: permite visualizar a frequência dos preços</li>
+                                    <li>Boxplot da distribuição de Outliers: identifica visualmente possíveis outliers</li>
+                                    <li>Remoção de Outliers: elimina valores extremos que podem distorcer o modelo</li>
+                                    <li>Junção de colunas que são compostas: agrupa informações que estão divididas em múltiplas colunas</li>
+                                </ul>
+                                </li>
+
+                                <li>Criando conjunto de testes
+                                <ul style="margin-top: -5px;">
+                                    <li>Verificando correlação das variáveis independentes com a dependente: ajuda a entender quais variáveis são mais relevantes para o modelo</li>
+                                    <li>Construindo a lógica de estratificação para separar o conjunto de testes: garante que a divisão preserve características importantes dos dados</li>
+                                    <li>Verificando a proporção da estratificação: assegura que a amostra de teste seja representativa</li>
+                                    <li>Uso do StratifiedShuffleSplit para a separação: ferramenta do scikit-learn para divisão estratificada</li>
+                                    <li>Remoção de Outliers: evita que valores extremos influenciem a separação dos dados</li>
+                                    <li>Junção de colunas que são compostas: melhora a representação das variáveis no conjunto de dados</li>
+                                </ul>
+                                </li>
+
+                                <li>Preparando dados para Machine Learning
+                                <ul style="margin-top: -5px;">
+                                    <li>Separação entre variáveis independentes e dependentes (conjunto de treino): organiza os dados para que o modelo possa aprender corretamente</li>
+                                    <li>Modelo de Regressão Linear do sklearn: algoritmo simples e eficiente para prever valores contínuos</li>
+                                    <li>Padronização dos dados: deixar os dados na mesma proporção</li>
+                                    <li>Ajuste e predição dos dados: treino do modelo e geração das previsões</li>
+                                </ul>
+                                </li>
+
+                                <li>Avaliando o modelo
+                                <ul style="margin-top: -5px;">
+                                    <li>Verificando diferença entre o predito e o real: avalia o erro entre as previsões e os valores reais</li>
+                                    <li>Uso das métricas MAE, MSE, RMSE, R² para avaliar o modelo</li>
+                                    <li>Teste de redução de dimensionalidade, remoção de outliers foram feitos na etapa anterior para identificar se houve melhora nas métricas do modelo (apenas a remoção de outliers resultou num melhor desempenho)</li>
+                                    <li>Verificação da distribuição dos Resíduos: permite avaliar se os erros do modelo seguem um padrão aleatório</li>
+                                    <li>Presença de Heterocedasticidade nos dados, o que resulta num modelo com falhas, principalmente para valores de casas mais altos (isso ocorre pois há poucos dados para essa faixa de preços)</li>
+                                    <li>Validação Cruzada para verificar a consistência do modelo: mede a robustez das métricas usando diferentes divisões dos dados</li>
+                                </ul>
+                                </li>
+
+                                <li>Uso do modelo no conjunto de teste
+                                <ul style="margin-top: -5px;">
+                                    <li>Uso da Regressão Linear nos dados de teste: aplica o modelo treinado em dados nunca vistos</li>
+                                    <li>Maior erro já que é executado com dados não vistos: mostra o desempenho real do modelo fora da amostra de treino</li>
+                                </ul>
+                                </li>
+
+                                
+                            </ul>
+                        </p>
+                    </div>
+
+                    <h3 style="margin-top: -5px;">Tecnologias e Ferramentas</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>sklearn, numpy, pandas</li>
+                        <li>Estatística Básica</li>
+                        <li>Mãos à Obra Aprendizado de Máquina com Scikit-Learn</li>
+                    </ul>
+
+                    <h3 style="margin-top: -5px;">Principais Insights</h3>
+                    <p>
+                        <ul>
+                            <li>Remoção de muitas características da tabela diminui a explicabilidade e eficiência do modelo</li>
+                            <li>Dados extremos prejudicam o modelo</li>
+                            <li>Criação de Pipeline para executar mais rapidamente as funções em cima dos dados</li>
+                            <li>Apenas características numéricas então não foi necessário o uso de One-Hot Encondinf para transformar variáveis categóricas em não categóricas</li>
+                        </ul>
+                    </p>
+
+                    <h3 style="margin-top: -5px;">Aprendizados</h3>
+                    <ul>
+                        <li>Uso de estratificação para separar os dados (principalmente se for poucos dados)</li>
+                        <li>Criação de Pipeline</li>
+                        <li>Uso de ferramentas para Machine Learning</li>
+                    </ul>
+
+                </div> <!-- end s-content__main -->
+
+            </article>
+
+        </main> <!-- end s-content -->
+
+    </div> <!-- end s-pagewrap -->
+
+    <div id="lightbox" class="lightbox-container" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content">
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById("lightbox").style.display = "block";
+            document.getElementById("lightbox-img").src = src;
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+
+    <a href="biblioteca.html" class="next-project-arrow" title="Próximo projeto">
+        &#10140; <!-- código da seta ➜ -->
+    </a>
+
+</body>
+</html>

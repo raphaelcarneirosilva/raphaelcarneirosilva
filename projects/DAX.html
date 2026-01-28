@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="no-js ss-preload" lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>DAX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <style>
+        .next-project-arrow {
+            position: fixed;
+            right: 20px; /* distância da borda direita */
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            background-color: #001f3f;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .next-project-arrow:hover {
+            background-color: #24396d;
+        }
+
+        .lightbox-img {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .lightbox-container {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+    </style>
+
+
+</head>
+
+<body id="top">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+    <div class="s-pagewrap">
+
+        <!-- Header -->
+        <header class="s-header">
+
+            <div class="header-mobile">
+                <span class="mobile-home-link"><a href="index.html">Portifólio.</a></span>
+                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+            </div>
+
+            <div class="row wide main-nav-wrap">
+                <nav class="column lg-12 main-nav">
+                    <ul>
+                        <li><a href="../index.html" class="home-link">Portifólio.</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header> <!-- end s-header -->
+
+        <!-- Main content -->
+        <main class="s-content s-content--narrow">
+
+            <article class="row format-standard">
+
+                <div class="column lg-10 s-content__header s-content__header--narrow">
+                    <h1 class="s-content__title s-content__title--post">DAX e Medidas</h1>
+                    <p class="lead" style="font-size: large;">
+                        Projeto em que foi possível desenvolver maiores habilidades em Power BI com ferramentas como DAX e criar Medidas para
+                        melhorar performance do relatório. 
+                    </p>
+                    <div  style="margin-top: -20px;">
+                        <p class="lead" style="font-size: large;">
+                            Então, desenvolvi cálculos com funções do tipo SUMX, FILTER, RELATED, além de outras que protegem as medidas de filtros 
+                            externos como a função ALL.
+                        </p>
+                    </div>
+                    <div  style="margin-top: -20px;">
+                        <p class="lead" style="font-size: large;">
+                            Além do DAX, Medidas e Funções também foi possível aprender a modelagem do dados e a relação das tabelas com o conjunto de dados, já que as medidas foram criadas dentro de uma nova tabela.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="column lg-10 s-content__main s-content__main--narrow">
+
+
+                    <h3 style="margin-top: -5px;">Objetivo do Projeto</h3>
+                    <p class="lead" style="font-size: large;">
+                        Avançar para além de dashboards e visuais, e aprender Medidas e a organização do projeto.
+                    </p>
+
+                    <h3 style="margin-top: -5px;">Tecnologias e Ferramentas</h3>
+                    <ul>
+                        <li>Power BI</li>
+                        <li>DAX e Medidas</li>
+                    </ul>
+
+                    <h3 style="margin-top: -5px;">Visualizações</h3>
+                    <div style="display: flex; gap: 20px;">
+
+                        <div style="display: flex; flex-direction: column; align-items: flex-start; width: 50%;">
+                            <img src="../images/img-proj/DAX_Medidas/Visual usando DAX.png"
+                            style="width: 100%; border-radius: 10px; cursor: pointer;"
+                            onclick="openLightbox(this.src)">
+                            <div  style="margin-top: -30px;">
+                                <p class="lead" style="font-size: small;">
+                                    Visuais usando as Métricas.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; align-items: flex-start; width: 50%;">
+                            <img src="../images/img-proj/DAX_Medidas/DAX para Medidas.png" 
+                            style="width: 100%; border-radius: 10px;"
+                            onclick="openLightbox(this.src)">
+                            <div  style="margin-top: -30px;">
+                                <p class="lead" style="font-size: small;">
+                                    Exemplo da criação de uma Medida com DAX junto com as outras medidas à direita.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <h3 style="margin-top: -5px;">Aprendizados</h3>
+                    <div style="display: flex; gap: 20px;">
+                        <ul>
+                            <li>Uso de DAX para carregar colunas de outras tabelas com o RELATED()</li>
+                            <li>Tratamento de Dados para melhor visualiz no Dashboard</li>
+                        </ul>
+                    </div>
+
+
+                    <!-- <h3 style="margin-top: -5px;">Próximos Passos</h3>
+                    <p>
+                        Planeja continuar ou melhorar esse projeto? Coloque aqui ideias futuras, como integração com uma API ou novas métricas a serem analisadas.
+                    </p> -->
+
+                </div> <!-- end s-content__main -->
+
+            </article>
+
+        </main> <!-- end s-content -->
+
+    </div> <!-- end s-pagewrap -->
+
+    <div id="lightbox" class="lightbox-container" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content">
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById("lightbox").style.display = "block";
+            document.getElementById("lightbox-img").src = src;
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+
+    <a href="911.html" class="next-project-arrow" title="Próximo projeto">
+        &#10140; <!-- código da seta ➜ -->
+    </a>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="no-js ss-preload" lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>Dashboard de Estudos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <style>
+        .next-project-arrow {
+            position: fixed;
+            right: 20px; /* distância da borda direita */
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            background-color: #001f3f;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .next-project-arrow:hover {
+            background-color: #24396d;
+        }
+
+        .lightbox-img {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .lightbox-container {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+    </style>
+
+
+</head>
+
+<body id="top">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+    <div class="s-pagewrap">
+
+        <!-- Header -->
+        <header class="s-header">
+
+            <div class="header-mobile">
+                <span class="mobile-home-link"><a href="index.html">Portifólio.</a></span>
+                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+            </div>
+
+            <div class="row wide main-nav-wrap">
+                <nav class="column lg-12 main-nav">
+                    <ul>
+                        <li><a href="../index.html" class="home-link">Portifólio.</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header> <!-- end s-header -->
+
+        <!-- Main content -->
+        <main class="s-content s-content--narrow">
+
+            <article class="row format-standard">
+
+                <div class="column lg-10 s-content__header s-content__header--narrow">
+                    <h1 class="s-content__title s-content__title--post">Dashboard de Estudos</h1>
+                    <p class="lead" style="font-size: large;">
+                       Dashboard feito com dados pessoais de estudo para o mês de Abril de 2025.
+                    </p>
+                </div>
+
+                <div class="column lg-10 s-content__main s-content__main--narrow">
+
+
+                    <h3 style="margin-top: -5px;">Objetivo do Projeto</h3>
+                    <p class="lead" style="font-size: large;">
+                        O objetivo do projeto foi resumir os dados e visualizá-los.
+                    </p>
+
+                    <h3 style="margin-top: -5px;">Tecnologias e Ferramentas</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Google Sheets</li>
+                        <li>Seaborn</li>
+                        <li>MatplotLib</li>
+                    </ul>
+
+                    <h3 style="margin-top: -5px;">Visualizações</h3>
+                    <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+
+                        <div style="display: flex; flex-direction: column; align-items: flex-start; width: 50%;">
+                            <img src="../images/img-proj/DashEstudos/1.png"
+                            style="width: 100%; border-radius: 10px; cursor: pointer;"
+                            onclick="openLightbox(this.src)">
+                            <div  style="margin-top: -30px;">
+                                <p class="lead" style="font-size: small;">
+                                    Dashboard com resumo e visualização de todas as informações.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- <h3 style="margin-top: -5px;">Principais Insights</h3>
+                    <p>
+                        Agrupamento e visualização dos dados para descobrir os horários de picos das ligações do 911.
+                    </p>
+
+                    <h3 style="margin-top: -5px;">Aprendizados</h3>
+                    <ul>
+                        <li>Uso de Seaborn para produzir os gráficos.</li>
+                        <li>Tratamento de Dados para melhor adequação ao que é preciso ser mostrado (foi feito uma separação de dia da semana, hora e mês - antes havia apenas uma coluna com tipo 'date')</li>
+                    </ul> -->
+
+                    <!-- <h3 style="margin-top: -5px;">Próximos Passos</h3>
+                    <p>
+                        Planeja continuar ou melhorar esse projeto? Coloque aqui ideias futuras, como integração com uma API ou novas métricas a serem analisadas.
+                    </p> -->
+
+                </div> <!-- end s-content__main -->
+
+            </article>
+
+        </main> <!-- end s-content -->
+
+    </div> <!-- end s-pagewrap -->
+
+    <div id="lightbox" class="lightbox-container" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content">
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById("lightbox").style.display = "block";
+            document.getElementById("lightbox-img").src = src;
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+
+    <a href="vendas.html" class="next-project-arrow" title="Próximo projeto">
+        &#10140; <!-- código da seta ➜ -->
+    </a>
+
+</body>
+</html>
