@@ -3403,11 +3403,10 @@ img.u-pull-left {
 }
 
 .about-info__pic {
-    object-fit: cover;
+    object-fit     : cover;
+    margin         : 0;
+    vertical-align : bottom;
     width: 65%;
-    display: block;        /* importante */
-    margin-left: auto;     /* empurra pra direita */
-    margin-right: 0;
 }
 
 
