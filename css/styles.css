@@ -3403,11 +3403,13 @@ img.u-pull-left {
 }
 
 .about-info__pic {
-    object-fit     : cover;
-    margin         : 0;
-    vertical-align : bottom;
+    object-fit: cover;
     width: 65%;
+    display: block;        /* importante */
+    margin-left: auto;     /* empurra pra direita */
+    margin-right: 0;
 }
+
 
 .about-info__text {
     padding     : var(--vspace-3_5) 10vw var(--vspace-2) 0;
