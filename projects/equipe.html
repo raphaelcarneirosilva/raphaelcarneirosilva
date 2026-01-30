@@ -1,186 +1,63 @@
-<!DOCTYPE html>
-<html class="no-js ss-preload" lang="en">
-<head>
+<div style="display: flex; gap: 20px;">
 
-    <meta charset="utf-8">
-    <title>Desenvolvimento de equipes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<div style="display: flex; flex-direction: column; align-items: flex-start; width: 50%;">
+                            <img src="../images/img-proj/DAX_Medidas/chatbot.png"
+                            <img src="../images/img-proj/DashEstudos/chatbot.png"
+style="width: 100%; border-radius: 10px; cursor: pointer;"
+onclick="openLightbox(this.src)">
+<div  style="margin-top: -30px;">
+@@ -149,53 +149,53 @@
+</div>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/vendor.css">
-    <link rel="stylesheet" href="../css/styles.css">
+<div style="display: flex; flex-direction: column; align-items: flex-start; width: 50%;">
+                            <img src="../images/img-proj/DAX_Medidas/geolocalização.png" 
+                            <img src="../images/img-proj/DashEstudos/geolocalização.png" 
+style="width: 100%; border-radius: 10px;"
+onclick="openLightbox(this.src)">
+<div  style="margin-top: -30px;">
+<p class="lead" style="font-size: small;">
+Organizei times de tecnologia, dados e uni o projeto a pessoas para construção de plataformas que atendiam o mercado.
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+</p>
+</div>
+</div>
 
-    <style>
-        .next-project-arrow {
-            position: fixed;
-            right: 20px; /* distância da borda direita */
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2rem;
-            background-color: #001f3f;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            text-decoration: none;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
-            transition: background-color 0.3s ease;
-        }
+<!-- <h3 style="margin-top: -5px;">Próximos Passos</h3>
+                   <p>
+                       Planeja continuar ou melhorar esse projeto? Coloque aqui ideias futuras, como integração com uma API ou novas métricas a serem analisadas.
+                   </p> -->
 
-        .next-project-arrow:hover {
-            background-color: #24396d;
-        }
+</div> <!-- end s-content__main -->
 
-        .lightbox-img {
-            cursor: pointer;
-            transition: 0.3s;
-        }
+</article>
 
-        .lightbox-container {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            padding-top: 60px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.9);
-        }
+</main> <!-- end s-content -->
 
-        .lightbox-content {
-            margin: auto;
-            display: block;
-            max-width: 90%;
-            max-height: 90%;
-        }
+</div> <!-- end s-pagewrap -->
 
-        .lightbox-close {
-            position: absolute;
-            top: 30px;
-            right: 50px;
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+<div id="lightbox" class="lightbox-container" onclick="closeLightbox()">
+<span class="lightbox-close">&times;</span>
+<img id="lightbox-img" class="lightbox-content">
+</div>
 
-    </style>
+<!-- JavaScript -->
+<script src="../js/plugins.js"></script>
+<script src="../js/main.js"></script>
 
+<script>
+function openLightbox(src) {
+document.getElementById("lightbox").style.display = "block";
+document.getElementById("lightbox-img").src = src;
+}
 
-</head>
+function closeLightbox() {
+document.getElementById("lightbox").style.display = "none";
+}
+</script>
 
-<body id="top">
-
-    <!-- Preloader -->
-    <div id="preloader">
-        <div id="loader"></div>
-    </div>
-
-    <div class="s-pagewrap">
-
-        <!-- Header -->
-        <header class="s-header">
-
-            <div class="header-mobile">
-                <span class="mobile-home-link"><a href="index.html">Portifólio.</a></span>
-                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
-            </div>
-
-            <div class="row wide main-nav-wrap">
-                <nav class="column lg-12 main-nav">
-                    <ul>
-                        <li><a href="../index.html" class="home-link">Portifólio.</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-        </header> <!-- end s-header -->
-
-        <!-- Main content -->
-        <main class="s-content s-content--narrow">
-
-            <article class="row format-standard">
-
-                <div class="column lg-10 s-content__header s-content__header--narrow">
-                    <h1 class="s-content__title s-content__title--post">Desenvolvimento de equipes</h1>
-                    <p class="lead" style="font-size: large;">
-                         Atuei na gestão de equipes em diferentes contextos, passando por áreas
-                        operacionais, CX, atendimento, gestão geral e dados. Independentemente do setor, 
-                        identifiquei um padrão de rotinas e rituais que aplico para engajar o time e 
-                        direcionar a entrega de resultados de forma consistente.
-                    </p>
-       
-                </div>
-
-                <div class="column lg-10 s-content__main s-content__main--narrow">
-                        
-                      <p class="lead" style="font-size: large;">
-                       Acredito que a base de uma boa gestão começa na contratação assertiva, garantindo 
-                       o alinhamento entre perfil, função e momento da empresa. A partir disso, foco no 
-                       entendimento técnico do colaborador e, principalmente, no quanto ele compreende o 
-                      negócio e o papel que exerce dentro da equipe.
-                    </p>
-                        <p class="lead" style="font-size: large;">
-                       Acredito que a base de uma boa gestão começa na contratação assertiva, garantindo 
-                       o alinhamento entre perfil, função e momento da empresa. A partir disso, foco no 
-                       entendimento técnico do colaborador e, principalmente, no quanto ele compreende o 
-                      negócio e o papel que exerce dentro da equipe.
-                    </p>
-                      </p>
-                        <p class="lead" style="font-size: large;">
-                      No dia a dia, aplico rotinas de acompanhamento, como feedbacks semanais ou  
-                      quinzenais, ajustando a frequência conforme a maturidade do profissional e o
-                      momento da operação. Em cenários de prazos curtos, curva de aprendizado mais 
-                      lenta ou queda de entrega, utilizo dailies individuais como ferramenta de apoio, 
-                    alinhamento e aceleração do desenvolvimento.
-                    </p>
-                                         
-                        </div>
-
-                            <!-- <h3 style="margin-top: -5px;">Próximos Passos</h3>
-                    <p>
-                        Planeja continuar ou melhorar esse projeto? Coloque aqui ideias futuras, como integração com uma API ou novas métricas a serem analisadas.
-                    </p> -->
-
-                </div> <!-- end s-content__main -->
-
-            </article>
-
-        </main> <!-- end s-content -->
-
-    </div> <!-- end s-pagewrap -->
-
-    <div id="lightbox" class="lightbox-container" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img id="lightbox-img" class="lightbox-content">
-    </div>
-
-    <!-- JavaScript -->
-    <script src="../js/plugins.js"></script>
-    <script src="../js/main.js"></script>
-
-    <script>
-        function openLightbox(src) {
-            document.getElementById("lightbox").style.display = "block";
-            document.getElementById("lightbox-img").src = src;
-        }
-
-        function closeLightbox() {
-            document.getElementById("lightbox").style.display = "none";
-        }
-    </script>
-
-    <a href="resultado.html" class="next-project-arrow" title="Próximo projeto">
-        &#10140; <!-- código da seta ➜ -->
-    </a>
+<a href="sistemas.html" class="next-project-arrow" title="Próximo projeto">
+&#10140; <!-- código da seta ➜ -->
+</a>
 
 </body>
 </html>
